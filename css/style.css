@@ -304,6 +304,30 @@ p {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
+.thumb-work {
+  position: relative;
+}
+
+.title-work {
+ position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 4);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(47, 48, 58, 0.8);
+}
 
 .container-work .list {
   display: flex;
