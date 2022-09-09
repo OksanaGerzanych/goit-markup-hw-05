@@ -1,5 +1,5 @@
 :root {
-  /* Fonts */
+  /* Fonts */ 
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
 
@@ -9,6 +9,7 @@
   --black-text-color: #000000;
   --logo-text-color: #2196f3;
   --white-text-color: #ffffff;
+  --link-social-color: #AFB1B8;
 
   /* Background colors */
   --main-bgr: #ffffff;
@@ -17,6 +18,7 @@
   --second-btn-bgr: #ffffff;
   --active-btn-brg: #188ce8;
   --team-btn-portfolio-bgr: #f5f4fa;
+  --section-service-bgr: #C4C4C4;
 
   /*  Border colors */
   --border-header: #ececec;
@@ -32,10 +34,12 @@ body {
   font-family: var(--main-font);
   color: var(--main-text-color);
   font-size: 14px;
-  background: var(--main-bgr);
+  background-color: var(--main-bgr);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/* Container */
+/**
+|============================ | Container |============================
+*/
 h1,
 h2,
 h3,
@@ -54,8 +58,9 @@ p {
   margin-right: auto;
   margin-left: auto;
 }
-
-/* header */
+/**
+|============================ | Header |============================
+*/
 .container-header {
   display: flex;
   justify-content: center;
@@ -92,7 +97,7 @@ p {
 
  width: 100%;
  height: 4px;
- background: #2196F3;
+ background-color: var(--primary-btn-bgr);
  border-radius: 2px;
 }
 
@@ -101,7 +106,7 @@ p {
   gap: 30px;
 }
 .header {
-  background: var(--second-btn-bgr);
+  background-color: var(--second-btn-bgr);
   border-bottom: 1px solid var(--border-header);
 }
 
@@ -175,9 +180,10 @@ p {
 .icon-header:focus {
   fill: currentColor;
 }
+/** 
+|============================ | Image  |============================
+*/
 
-
-/* image */
 
 .image,
 .image-team,
@@ -186,8 +192,10 @@ p {
   max-width: 100%;
   height: auto;
 }
+/**
+|============================ | Main |============================
+*/
 
-/* main */
 
 .list {
   list-style: none;
@@ -204,7 +212,7 @@ p {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #C4C4C4;
+  background-color: var(--section-service-bgr);
   background-image: 
   linear-gradient(rgba(47, 48, 58, 0.4), 
   rgba(47, 48, 58, 0.4)),
@@ -241,7 +249,7 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-text-color);
-  background: var(--primary-btn-bgr);
+  background-color: var(--primary-btn-bgr);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
@@ -254,7 +262,10 @@ p {
 .button:active {
   background-color: var(--active-btn-brg);
 }
-/* Переваги */
+/**
+|============================| Переваги |============================
+*/
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -269,7 +280,7 @@ p {
 }
 .box-benefits {
   height: 120px;
-  background: #F5F4FA;
+  background-color: var(--team-btn-portfolio-bgr);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -305,7 +316,10 @@ p {
   letter-spacing: 0.03em;
   color: var(--p-text-color);
 }
-/* Work  Чим ми займаємось*/
+/**
+|============================ | Work - Чим ми займаємось |============================
+*/
+
 .section-work {
   padding-top: 0;
 }
@@ -342,8 +356,8 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: rgba(47, 48, 58, 0.8);
+  color: var(--white-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .container-work .list {
@@ -354,11 +368,12 @@ p {
 .container-work .list-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
-
-/* team */
+/**
+|============================ | Team  |============================
+*/
 
 .section-team {
-  background: var(--team-btn-portfolio-bgr);
+  background-color: var(--team-btn-portfolio-bgr);
 }
 .container-team .list-team {
   --items: 4;
@@ -367,7 +382,7 @@ p {
 }
 .container-team .card {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  background: var(--main-bgr);
+  background-color: var(--main-bgr);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -395,7 +410,7 @@ p {
   margin-bottom: 16px;
 }
 .image-team {
-  background: url(4853.jpg);
+  background-color: url(4853.jpg);
   border-radius: 0px;
 }
 
@@ -414,7 +429,7 @@ p {
   height: 44px;
   background-color: var(--main-bgr);
   border-radius: 50%;
-  color: #AFB1B8;
+  color: var(--link-social-color);
   
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -430,8 +445,10 @@ p {
   fill: currentColor;
 }
 
+/**
+ |============================| Клієнти |============================
+*/
 
-/* Clients */
 .container-clients .list {
   --items: 6;
   display: flex;
@@ -453,9 +470,9 @@ p {
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--link-social-color);
   border-radius: 4px;
-  color: #AFB1B8;
+  color: var(--link-social-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
@@ -465,15 +482,14 @@ p {
   fill: currentColor;
 }
 
+/**
+  |============================| Footer |============================
+*/
 
-
-
-/* footer */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: var(--main-title-footer-bgr);
- 
+  background-color: var(--main-title-footer-bgr);
 }
 .logo-footer {
   display: inline-block;
@@ -530,7 +546,7 @@ p {
   height: 44px;
   border-radius: 50%;
   color: var(--second-btn-bgr);
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -544,8 +560,9 @@ p {
   height: 20px;
   fill: currentColor;
 }
-
-/* Portfolio page */
+/**
+|============================ | Portfolio page |============================
+*/
 
 .container-portfolio {
   display: flex;
@@ -596,7 +613,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  background: var(--team-btn-portfolio-bgr);
+  background-color: var(--team-btn-portfolio-bgr);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-portfolio:hover,
@@ -635,7 +652,12 @@ p {
 .link-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* Перехід на текст при ховері на фото */
+/**
+  |============================  
+  | Перехід на текст при ховері на фото 
+  |============================
+*/
+
 .thumb-overlay-portfolio {
   position: relative;
   overflow: hidden;
@@ -653,7 +675,7 @@ p {
   justify-content: center;
   align-items: center;
  
-  background: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);
   
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -669,8 +691,9 @@ p {
 .link-portfolio:focus .thumb-text-hover-portfolio {
  transform: translateY(0);
 }
-
-/* Modal window*/
+/**
+  |============================  | Modal window  |============================
+*/
 
 .backdrop {
   position: fixed;
@@ -678,7 +701,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1000;
  
 }
@@ -696,7 +719,7 @@ p {
   width: 528px;
   height: 581px;
 
-  background: var(--main-bgr);
+  background-color: var(--main-bgr);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
@@ -716,7 +739,7 @@ p {
 
   padding: 0;
   border-radius: 50%;
-  background: #FFFFFF;
+  background-color: var(--main-bgr);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
